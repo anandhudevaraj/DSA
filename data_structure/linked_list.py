@@ -1,6 +1,8 @@
-# # """
-# # Learning linked_list implementation in Python
-# # """
+"""
+Learning linked_list implementation in Python
+"""
+
+
 # #
 # #
 # # class LinkedList():
@@ -57,3 +59,9 @@
 # x = add_node(x, 2, value='A')
 #
 # print_nodes(x)
+class Node:
+    """
+    Node class to represent linked list node
+    """
+    def __init__(self):
+        pass
