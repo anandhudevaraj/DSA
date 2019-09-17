@@ -63,5 +63,34 @@ class Node:
     """
     Node class to represent linked list node
     """
-    def __init__(self):
-        pass
+
+    def __init__(self, value, next_node=None):
+        self.value = value
+        self.next_node = next_node
+
+
+class LinkedList:
+
+    def __init__(self, value):
+        self.first_node = Node(value)
+
+    def add_node(self, value, position=None):
+        last_node = self.first_node
+        if position == 0:
+            self.first_node = Node(value, self.first_node)
+            return
+        elif position == None:
+            while last_node.next_node:
+                last_node = last_node.next_node
+        elif position > 0:
+            while (position-1 > 0):
+                last_node = last_node.next_node
+                position -= 1
+        last_node.next_node = Node(value, last_node.next_node)
+
+    def print_nodes(self):
+        node = self.first_node
+        print node.value
+        while node.next_node:
+            node = node.next_node
+            print node.value
