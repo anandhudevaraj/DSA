@@ -64,4 +64,4 @@ class Node:
     Node class to represent linked list node
     """
     def __init__(self):
-        pass
+        print ("Hello World")
